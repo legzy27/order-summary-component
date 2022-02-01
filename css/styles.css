@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ /* $background-color: #e0e8ff */
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("../images/pattern-background-desktop.svg") no-repeat;
+  background-color: #e0e8ff;
+  background-position-y: -75px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+a,
+span,
+p {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.wrapper {
+  padding: 5em 20px;
+}
+.wrapper .card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.bottom {
+  position: relative;
+  padding: 2.5em 3em;
+}
+.bottom .inner-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.bottom .inner-bottom .title {
+  font-size: 25px;
+  line-height: 1;
+  color: #1f2f56;
+  font-weight: 900;
+}
+.bottom .inner-bottom .description {
+  color: #7280a7;
+  padding-inline: 0.5em;
+  line-height: 1.5;
+  margin-top: -0.5em;
+}
+.bottom .inner-bottom .plan {
+  display: inline-flex;
+  align-items: center;
+  padding: 22px;
+  border-radius: 10px;
+  background-color: #f5f7ff;
+  margin-top: -10px;
+  position: relative;
+}
+.bottom .inner-bottom .pay {
+  background-color: #3829e0;
+  color: #ffffff;
+  width: 100%;
+  padding: 13px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 15px 15px #dae0f1;
+}
+.bottom .inner-bottom .pay:hover {
+  background-color: #756af1;
+}
+.bottom .inner-bottom .cancel {
+  color: #7280a7;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.bottom .inner-bottom .cancel:hover {
+  color: #1f2f56;
+}
+
+.music-icon {
+  width: 42px;
+  height: 42px;
+  margin-right: 20px;
+}
+
+.price {
+  line-height: 1.5;
+}
+.price h3 {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.price span {
+  color: #7280a7;
+}
+
+.change {
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  color: #3829e0;
+  position: absolute;
+  right: 20px;
+}
+.change::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 2px;
+  background-color: #3829e0;
+}
+.change:hover {
+  color: #756af1;
+}
+.change:hover::after {
+  width: 0;
+}
+
+@media screen and (max-width: 440px) {
+  .description {
+    font-size: 15px;
+    padding-inline: 1.5em !important;
+  }
+
+  .bottom {
+    padding: 1.5em;
+  }
+
+  .plan {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+  .plan .music-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .plan .price-title {
+    font-size: 14px;
+  }
+  .plan .price span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 410px) {
+  body {
+    background-position-y: unset;
+    background: url("../images/pattern-background-mobile.svg") no-repeat !important;
+    background-color: #e0e8ff !important;
+  }
+}
+@media screen and (max-width: 340px) {
+  .plan {
+    padding: 15px !important;
+  }
+  .plan .music-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+}
